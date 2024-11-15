@@ -11,6 +11,8 @@ The assumptions for the given task:
 8. As it was not possible to simulate a full length test where the log file is around 10 MB, a considerably long logs file was tested.
 9. As there was no file names or naming conventions mentioned for the code as well as the output, most appropriate names were chosen and used.
 10. As there were no specific messages to be shown when file is not found or unable to be read, all commonly used messages were structured and displayed.
+11. As the matches should be case insensitive, regardless of the protocol being in uppercase or lowercase, the mappings will be checked for.
+12. As there was no mention in the requirement stating that the tags should be considered to be case insensitive, the tags were considered exactly as mentioned in the lookup file.
 
 
 Tests Implemented:
@@ -22,6 +24,7 @@ Tests Implemented:
 6. Checks were made to check if the parser works fine if the lookup_table does not have any mappings, with only headings, the output mentions all are unnamed and also, the prot/protocol combination is listed though.
 7. If both the logs as well as the mappings do not have any meaningful entries, then it was checked if the output file did not have any entries.
 8. In addition to this, all the file related tests, value related tests and outputs were verified.
+9. Values in both lower and uppercases were passed for protocol to ensure the matches were evaluated properly, to make sure they are case insensitive.
 
 Execution Steps:
 1. Load the lookup data into the lookup_table.txt file and place it in the same folder as the python script, parser.py file.
